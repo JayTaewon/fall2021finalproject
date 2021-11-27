@@ -6,7 +6,7 @@ import requests
 # content: "pretty cool"
 # authorization: OTE0MTgyNjQxODcwMzMxOTA0.YaJijw.eWBxxSa11GYNJAsnG20NGgv556A
 
-# Note to self: Discord must be signed in on the RPi for this to work.
+# Note to self: Discord must be signed in on the RPi for this to work. EDIT: Discord can be closed? Need to figure this one out.
 
 payload = {
     'content': "DISCORD IS CLOSED AND IS WORKING WHAT DID I DO"
