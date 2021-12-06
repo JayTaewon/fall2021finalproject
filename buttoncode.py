@@ -1,19 +1,15 @@
 import requests
 
-# https://discord.com/api/v9/channels/914183399139336215/messages
-# https://discord.com/api/v9/channels/914183399139336215/messages
+token = "OTE0MTgyNjQxODcwMzMxOTA0.Ya4cRw.7ejCGxJ4iBkYxeV1yWntseCoNwc"
+channel_ds = 914183399139336215
 
-# content: "pretty cool"
-# authorization: OTE0MTgyNjQxODcwMzMxOTA0.YaJijw.eWBxxSa11GYNJAsnG20NGgv556A
+def sendMessage(token, channel_id, message):   
+    url = "https://discord.com/api/v9/channels/{}/messages".format(channel_id) 
+    data = {"content": message}
+    header = {"authorization": token}
+    
 
-# Note to self: Discord must be signed in on the RPi for this to work. EDIT: Discord can be closed? Need to figure this one out.
+    r = requests.post(url, data=data, headers=header)
+    print(r.status_code)
 
-payload = {
-    'content': "DISCORD IS CLOSED AND IS WORKING WHAT DID I DO"
-}
-
-header = {
-    'authorization': 'OTE0MTgyNjQxODcwMzMxOTA0.YaJijw.eWBxxSa11GYNJAsnG20NGgv556A'
-}
-
-r = requests.post("https://discord.com/api/v9/channels/914183399139336215/messages", data=payload, headers=header)
+sendMessage("OTE0MTgyNjQxODcwMzMxOTA0.Ya4cRw.7ejCGxJ4iBkYxeV1yWntseCoNwc", 914183399139336215, "EMERGENCY MEETING CALLED: SENDING YOU TO MEETING TABLE")
