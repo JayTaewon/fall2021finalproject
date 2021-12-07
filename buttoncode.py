@@ -1,9 +1,9 @@
-import gpiozero import Button #imports the button library so the Raspberry Pi knows what to do with the button signal
+import gpiozero import Button                                                     #imports the button library so the Raspberry Pi knows what to do with the button signal
 
-import requests #imports the requests library which is what allows me to send a message through discord via the RPi.
+import requests                                                                   #imports the requests library which is what allows me to send a message through discord via the RPi.
 
-token = "OTE0MTgyNjQxODcwMzMxOTA0.Ya4cRw.7ejCGxJ4iBkYxeV1yWntseCoNwc" #Discord token, this is what allows the message to be sent by "Me" and not just a random id.
-channel_ds = 914183399139336215 #Routing number so the function knows which discord channel to send the message to.
+token = "OTE0MTgyNjQxODcwMzMxOTA0.Ya4cRw.7ejCGxJ4iBkYxeV1yWntseCoNwc"             #Discord token, this is what allows the message to be sent by "Me" and not just a random id.
+channel_ds = 914183399139336215                                                   #Routing number so the function knows which discord channel to send the message to.
 
 def sendMessage(token, channel_id, message):                                      #Creating the messaging function
     url = "https://discord.com/api/v9/channels/{}/messages".format(channel_id)    #server URL
